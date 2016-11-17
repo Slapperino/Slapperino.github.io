@@ -1,12 +1,12 @@
 body {
-    background: rgb(125, 198, 205);
-    color: rgb(45, 45, 45);
+    background: rgb(90, 90, 90);
+    color: rgb(255, 255, 255);
     padding: 10px;
     font-family: arial;
 }
 
 header {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -19,14 +19,13 @@ header {
 /* navigation menu */
 
 nav {
-    background: rgb(239, 80, 41);
+    background: rgb(188, 54, 255);
     margin: 0 auto;
     display: flex;
     padding: 10px;
 }
 
 nav header {
-    display: flex;
     align-items: center;
     color: rgb(255, 255, 255);
     flex: 1;
@@ -41,7 +40,7 @@ nav ul {
 nav li {
     display: inline-block;
     padding: 0 10px;
-    font-size: 1.2em;
+    font-size: 5em;
 }
 
 nav a {
@@ -52,7 +51,9 @@ nav a {
 /* main container area beneath menu */
 
 main {
-    background: rgb(245, 238, 219);
+    border: 5px solid;
+    border-color: rgba(188, 54, 255, 1);
+    background: rgb(50, 50, 50);
     display: flex;
 }
 
@@ -68,16 +69,17 @@ main {
 [class=content] {
     flex: 1;
     padding: 4px;
-    padding-top: 0;
+    padding-top: 4px;
     margin-right: 10px;
 }
 
 [class=discography] header {
-    font-size: 1.25em;
+    padding-top: 4px;
+    font-size: 10em;
 }
 
 #image-billy {
-    border: 2px solid;
-    border-color: rgba(255, 255, 255, 1);
+    border: 5px solid;
+    border-color: rgba(188, 54, 255, 1);
     cursor: pointer; cursor: hand;
 }
