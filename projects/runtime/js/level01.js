@@ -22,9 +22,28 @@
         };
 
         // set this to true or false depending on if you want to see hitzones
-        game.setDebugMode(true);
+        game.setDebugMode(false);
 
         // BEGIN EDITING YOUR CODE HERE
+        var hitZoneSize = 25;
+        var damageFromObstacle = 10;
+        var createSawBlade = function(x,y) {
+            var myObstacle = game.createObstacle(hitZoneSize,damageFromObstacle);
+            myObstacle.x = x;
+            myObstacle.y = y;
+            game.addGameItem(myObstacle);    
+            var obstacleImage = draw.bitmap('img/sawblade.png');
+            myObstacle.addChild(obstacleImage);
+            obstacleImage.x = -25;
+            obstacleImage.y = -25;
+        }
+        createSawBlade(400, 200);
+        createSawBlade(600, 300);
+        createSawBlade(800, 200);
+        createSawBlade(1000, 300);
+        createSawBlade(1200, 200);
+        
+        
 
 
     }

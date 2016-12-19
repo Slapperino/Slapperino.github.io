@@ -41,10 +41,13 @@
 
         <!-- add any additional scripts here -->
         <script src="js/view/hud.js"></script>
+        <script src="js/view/background.js"></script>
+        <script src="js/level01.js"></script>
+
         <!-- override default styles here -->
         </style>
     </head>
-    <body>
+    <body style="background-color:#010023">
         <div id="main">
             <canvas id="canvas" width="500" height="500"></canvas>
         </div>
@@ -71,7 +74,7 @@
                     spritesheet,
                     halle,
                     hud, 
-                    orbManager, 
+                    orbManager,
                     playerManager, 
                     particleManager;
                 
@@ -83,6 +86,9 @@
                 ground = opspark.makeGround(app);
 
                 // TODO 2 : add background
+                
+                var background = opspark.makeBackground(app,ground);
+                view.addChild(background);
                 
                 var help = draw.textfield('MOVES || w: jump | e: flying jump | s: duck | space: fire | q: death', 
                     '20px Arial',
@@ -119,12 +125,18 @@
                         playerManager.hitTest(body);
                     });
                 }
+
                 
                 // TODO 1 : add a heads-up display to game
                     window.opspark.draw,
                     window.createjs;
+                    var hud = opspark.makeHud();
+                    view.addChild(hud);
                     window.hud = hud;
                 // TODO 3 : create game manager
+                var game = opspark.createGameManager(app,hud);
+                opspark.runLevelInGame(game);
+
 
             })();
         </script>
